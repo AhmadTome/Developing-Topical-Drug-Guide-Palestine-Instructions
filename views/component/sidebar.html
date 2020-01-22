@@ -1,15 +1,20 @@
-<nav id="sidebar">
+<nav id="sidebar" style=" overflow-y: auto;">
     <div class="p-4 pt-5">
         <a href="#" class="img logo rounded-circle mb-5"
            style="background-image: url(../../images/logo.jpg); width:200px; height:180px;"></a>
         <ul class="list-unstyled components mb-5">
 
             <li>
-                <a href="#">Add new Categories</a>
+                <a href="../admin/add_catigories.php">Add new Categories</a>
             </li>
 
             <li>
-                <a href="#">Add new Drug</a>
+                <a href="../admin/add_drug.php">Add new Drug</a>
+            </li>
+            <li>
+                <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="document.location.href = '../../helper/kill_session.php';">
+                    <p>Logout</p>
+                </a>
             </li>
         </ul>
 

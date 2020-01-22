@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_email'])) {
+    header('Location: ../login.php');
+}
+?>
 <html lang="en">
 <head>
     <title>Home Page</title>
@@ -32,11 +39,11 @@
                     <ul class="nav navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add new Categories</a>
+                            <a class="nav-link" href="add_catigories.php">Add new Categories</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add new Drug</a>
+                            <a class="nav-link" href="add_drug.php">Add new Drug</a>
                         </li>
                     </ul>
                 </div>
@@ -50,8 +57,31 @@
                     <div class="panel-title-sign mt-xl text-left">
                         <h2 class="title text-uppercase text-bold m-none"> Create a new categories &nbsp;&nbsp;</h2>
                     </div>
+                    <p class="text-left" style="color: white; background-color: red; width: 100%; font-size: 18px;">
+                        <?php
+                        if( isset($_SESSION['Error']) )
+                        {
+                            echo $_SESSION['Error'];
+
+                            unset($_SESSION['Error']);
+
+                        }
+                        ?>
+                    </p>
+
+                    <p class="text-left" style="color: white; background-color: green; width: 100%; font-size: 18px;">
+                        <?php
+                        if( isset($_SESSION['added_correctly']) )
+                        {
+                            echo $_SESSION['added_correctly'];
+
+                            unset($_SESSION['added_correctly']);
+
+                        }
+                        ?>
+                    </p>
                     <div class="panel-body">
-                        <form name="loginForm" action="../database/register.php" method="post" accept-charset="utf-8" onsubmit="return validateForm()">
+                        <form name="loginForm" action="../../database/addCategory.php" method="post" accept-charset="utf-8" onsubmit="return validateForm()">
                             <div class="form-group mb-lg">
                                 <label class="pull-left">Categories Name :</label>
                                 <input  name="cat_name" type="text" class="form-control input-lg text-left" placeholder="Enter The Categories Name : ..." required/>
@@ -63,29 +93,7 @@
                             </div>
 
 
-                            <p class="text-left" style="color: red">
-                                <?php
-                                if( isset($_SESSION['Error']) )
-                                {
-                                    echo $_SESSION['Error'];
 
-                                    unset($_SESSION['Error']);
-
-                                }
-                                ?>
-                            </p>
-
-                            <p class="text-left" style="color: green">
-                                <?php
-                                if( isset($_SESSION['added_correctly']) )
-                                {
-                                    echo $_SESSION['added_correctly'];
-
-                                    unset($_SESSION['added_correctly']);
-
-                                }
-                                ?>
-                            </p>
                             <div class="row pull-right">
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary hidden-xs">Add New Categories </button>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_email'])) {
+    header('Location: ../login.php');
+}
+?>
 <html lang="en">
 <head>
     <title>Home Page</title>
@@ -34,17 +41,21 @@
                     <ul class="nav navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add new Categories</a>
+                            <a class="nav-link" href="add_catigories.php">Add new Categories</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add new Drug</a>
+                            <a class="nav-link" href="add_drug.php">Add new Drug</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+
+                <?php
+                    $cats = getcats();
+                ?>
         <section class="body-sign col-xs-12 col-lg-offset-4">
             <div class="center-sign">
 
@@ -52,23 +63,50 @@
                     <div class="panel-title-sign mt-xl text-left">
                         <h2 class="title text-uppercase text-bold m-none"> Add a new drug &nbsp;&nbsp;</h2>
                     </div>
+                    <p class="text-left" style="color: white; background-color: red; width: 100%; font-size: 18px;">
+                        <?php
+                        if( isset($_SESSION['Error']) )
+                        {
+                            echo $_SESSION['Error'];
+
+                            unset($_SESSION['Error']);
+
+                        }
+                        ?>
+                    </p>
+
+                    <p class="text-left" style="color: white; background-color: green; width: 100%; font-size: 18px;">
+                        <?php
+                        if( isset($_SESSION['added_correctly']) )
+                        {
+                            echo $_SESSION['added_correctly'];
+
+                            unset($_SESSION['added_correctly']);
+
+                        }
+                        ?>
+                    </p>
                     <div class="panel-body">
-                        <form name="loginForm" action="../database/register.php" method="post" accept-charset="utf-8"
+                        <form name="loginForm" action="../../database/AddDrug.php" method="post" accept-charset="utf-8"
                               onsubmit="return validateForm()">
 
 
                             <div class="form-group mb-lg">
                                 <label class="pull-left">Categories Items :</label>
-                                <select class="form-control" id="sel1">
+                                <select class="form-control" id="categories" name="categories">
                                     <option disabled selected>--- Select the category ---</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                    <?php
+
+                                        for($i = 0 ; $i < count($cats) ; $i++){
+                                            echo '<option value='. $cats[$i]["id"] .'>'. $cats[$i]["cat_repName"] .'</option>';
+                                        }
+
+                                    ?>
                                 </select></div>
 
                             <div class="form-group mb-lg">
                                 <label class="pull-left">Drug Name :</label>
-                                <input name="cat_name" type="text" class="form-control input-lg text-left"
+                                <input name="name" type="text" class="form-control input-lg text-left"
                                        placeholder="Enter The Categories Name : ..." required/>
                             </div>
 
@@ -76,34 +114,13 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <label class="text-left">Drug Description :</label>
-                                        <textarea id="content" style="text-align: left">
+                                        <textarea name="description" id="description" style="text-align: left">
                                         </textarea>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <p class="text-left" style="color: red">
-                                <?php
-                                if (isset($_SESSION['Error'])) {
-                                    echo $_SESSION['Error'];
-
-                                    unset($_SESSION['Error']);
-
-                                }
-                                ?>
-                            </p>
-
-                            <p class="text-left" style="color: green">
-                                <?php
-                                if (isset($_SESSION['added_correctly'])) {
-                                    echo $_SESSION['added_correctly'];
-
-                                    unset($_SESSION['added_correctly']);
-
-                                }
-                                ?>
-                            </p>
                             <div class="row pull-right">
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary hidden-xs">Add New Drug</button>
@@ -140,3 +157,50 @@
 </script>
 </body>
 </html>
+
+<script>
+    function validateForm() {
+
+        var content = tinymce.get('description').getContent();
+        while(content.search("'") > 0){
+            content = content.replace("'","");
+        }
+
+        tinymce.get('description').setContent(content);
+        console.log(content)
+    }
+</script>
+
+
+<?php
+
+function getcats(){
+
+    $servername = "localhost";
+    $username = "drug_guide";
+    $password = "";
+
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root",$password, $username,"3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn,"utf8");
+    $query = "SELECT * FROM `categories`";
+    $result = $conn->query($query);
+      if ($result->num_rows > 0) {
+        $info = [];
+          while ($row = $result->fetch_assoc()) {
+              array_push($info, ["cat_repName" => $row["cat_representative"],"id" => $row["id"]]);
+          }
+
+          return $info;
+    } else
+        return [];
+}
+
+
+
+?>
