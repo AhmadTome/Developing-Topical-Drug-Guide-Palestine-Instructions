@@ -1,4 +1,4 @@
-<nav id="sidebar" style="height: 100%; overflow-y: auto;">
+<nav id="sidebar" style="height: 100%; overflow-y: auto; width: 20%">
     <div class="p-4 pt-5">
         <a href="#" class="img logo rounded-circle mb-5"
            style="background-image: url(../../images/logo.jpg); width:200px; height:180px;"></a>
@@ -22,14 +22,14 @@
             </li>
 
             <li class="active">
-                <a href="#imagemenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Images</a>
+                <a href="#imagemenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Instruction to use ophthalmic topical drugs</a>
                 <ul class="collapse list-unstyled" id="imagemenu">
                     <li>
-                        <a class="cat" href="#">image 1</a>
+                        <a class="cat" href="../user/eye_doc.php">How to use eye drops</a>
                     </li>
 
                     <li>
-                        <a class="cat" href="#">image 2</a>
+                        <a class="cat" href="../user/o_doc.php">How to use ophthalmic ointment & gel.</a>
                     </li>
                 </ul>
             </li>

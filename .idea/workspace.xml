@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d42de6-3dcf-4abc-9a65-b193dc53f943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/AddDrug.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addCategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/getCategories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/kill_session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/component/userSidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user/references.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/cards-gallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/user/eye_doc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/user/o_doc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/add_catigories.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/add_catigories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/add_drug.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/add_drug.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/component/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/component/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/component/userSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/component/userSidebar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,25 +20,28 @@
         <entry file="file://$PROJECT_DIR$/views/user/home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="56" column="10" lean-forward="true" selection-end-line="110" selection-end-column="9" />
+              <caret line="56" column="10" selection-end-line="110" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user/references.php">
+        <entry file="file://$PROJECT_DIR$/views/component/userSidebar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="110" column="95" selection-start-line="110" selection-start-column="95" selection-end-line="110" selection-end-column="95" />
+            <state>
+              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#18#68#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/component/userSidebar.php">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="264">
+              <caret line="8217" column="12" lean-forward="true" selection-start-line="8217" selection-start-column="12" selection-end-line="8217" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -69,10 +60,14 @@
       <find>#ff0000</find>
       <find>container</find>
       <find>max-w</find>
+      <find>transform-on-hover</find>
+      <find>card</find>
+      <find>.card</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>#f8b739</replace>
+      <replace>.cardx</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -92,18 +87,21 @@
         <option value="$PROJECT_DIR$/database/register.php" />
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="$PROJECT_DIR$/views/register.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/views/admin/add_catigories.php" />
         <option value="$PROJECT_DIR$/views/admin/add_drug.php" />
         <option value="$PROJECT_DIR$/views/user/home.php" />
         <option value="$PROJECT_DIR$/views/component/sidebar.html" />
         <option value="$PROJECT_DIR$/views/user/references.php" />
+        <option value="$PROJECT_DIR$/css/cards-gallery.css" />
+        <option value="$PROJECT_DIR$/views/user/o_doc.php" />
+        <option value="$PROJECT_DIR$/views/user/eye_doc.php" />
         <option value="$PROJECT_DIR$/views/component/userSidebar.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
@@ -122,6 +120,16 @@
             <path>
               <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
               <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
@@ -155,6 +163,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\atome\PhpstormProjects\Developing Topical Drug Guide Palestine Instructions\css" />
       <recent name="C:\Users\atome\PhpstormProjects\Developing Topical Drug Guide Palestine Instructions\js" />
     </key>
   </component>
@@ -183,16 +192,18 @@
       <workItem from="1579598204574" duration="1759000" />
       <workItem from="1579600145512" duration="957000" />
       <workItem from="1579707026767" duration="16313000" />
+      <workItem from="1579765464065" duration="4985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19029000" />
+    <option name="totallyTimeSpent" value="24014000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2585288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -300,13 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="5541" column="14" selection-start-line="5541" selection-start-column="14" selection-end-line="5541" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/add_drug.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
@@ -318,13 +322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="56" column="10" lean-forward="true" selection-end-line="110" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -341,15 +338,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/references.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="110" column="95" selection-start-line="110" selection-start-column="95" selection-end-line="110" selection-end-column="95" />
+        <state relative-caret-position="51">
+          <caret line="78" column="25" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="56" column="10" selection-end-line="110" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cards-gallery.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/eye1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/o_doc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/eye_doc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/component/userSidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state>
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#18#68#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8217" column="12" lean-forward="true" selection-start-line="8217" selection-start-column="12" selection-end-line="8217" selection-end-column="12" />
         </state>
       </provider>
     </entry>
