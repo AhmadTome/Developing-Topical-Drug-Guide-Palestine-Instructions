@@ -1,4 +1,4 @@
-<nav id="sidebar" style="height: 100%; overflow-y: auto; width: 20%">
+<nav id="sidebar" style="height: 100%; overflow-y: auto;">
     <div class="p-4 pt-5">
         <a href="#" class="img logo rounded-circle mb-5"
            style="background-image: url(../../images/logo.jpg); width:200px; height:180px;"></a>
@@ -22,7 +22,10 @@
             </li>
 
             <li class="active">
-                <a href="#imagemenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Instruction to use ophthalmic topical drugs</a>
+
+                <a href="#imagemenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
+                    Direction for topical drugs uses
+                </a>
                 <ul class="collapse list-unstyled" id="imagemenu">
                     <li>
                         <a class="cat" href="../user/eye_doc.php">How to use eye drops</a>
@@ -52,6 +55,43 @@
     </div>
 </nav>
 
+<script>
+    $(document).ready(function () {
+        $('.cat').on("click", function () {
+            var id = $(this).attr('id');
+            $.ajax({
+                url: "../../database/getCategories.php",
+                type: "get",
+                data: {"id": id},
+                success: function (data) {
+                    $('.panel-body').empty();
+                    data = JSON.parse(data)
+
+                    console.log(data)
+
+                    for (var i = 0 ; i<data.length;i++){
+                        $('.panel-body').append('<div class="card">' +
+                            '                            <div class="card-header">' +
+                            '                                Name of the Drug is <b>'+ data[i]["name"] +
+                            '                            </b></div>' +
+                            '                            <div class="card-body">' +
+                            '                               ' + data[i]['description']+
+                            '                            </div>' +
+                            '                        </div><br>');
+                    }
+
+
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+        })
+    })
+</script>
 
 <?php
 

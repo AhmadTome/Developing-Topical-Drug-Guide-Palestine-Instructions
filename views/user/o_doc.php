@@ -24,12 +24,14 @@ if (!isset($_SESSION['user_email'])) {
         body {
             overflow: hidden;
             height: 100%;
+            !important;
         }
         #content {
             float:right;
             margin: 0 0 0 2em;
             max-height: 100%;
             overflow: auto;
+        !important;
         }
     </style>
 </head>
@@ -41,7 +43,7 @@ if (!isset($_SESSION['user_email'])) {
     <div id="content" class="p-4 p-md-5" style="background-color: white !important;">
 
 
-        <section class="body-sign col-xs-12 col-lg-offset-4">
+        <section class="body-sign col-xs-12 col-lg-offset-4 panel-body">
             <div class="center-sign">
 
                 <div class="panel panel-sign">
@@ -55,10 +57,10 @@ if (!isset($_SESSION['user_email'])) {
                <span class="col-sm-12 text-center">
                    <img src="../../images/o1.jpg" >
                </span>
-
             </div>
+
             <div class="row col-sm-12">
-              <span class="col-sm-6 pull-right">
+              <span class="col-sm-12 text-center">
                    <img src="../../images/o2.jpg" >
                </span>
 
@@ -77,7 +79,45 @@ if (!isset($_SESSION['user_email'])) {
 
 </body>
 </html>
+
+
+
+
 <script>
-    baguetteBox.run('.cards-gallery', { animation: 'slideIn'});
+    $(document).ready(function () {
+        $('.cat').on("click", function () {
+            var id = $(this).attr('id');
+            $.ajax({
+                url: "../../database/getCategories.php",
+                type: "get",
+                data: {"id": id},
+                success: function (data) {
+                    $('.panel-body').empty();
+                    data = JSON.parse(data)
+
+                    console.log(data)
+
+                    for (var i = 0 ; i<data.length;i++){
+                        $('.panel-body').append('<div class="card">' +
+                            '                            <div class="card-header">' +
+                            '                                Name of the Drug is <b>'+ data[i]["name"] +
+                            '                            </b></div>' +
+                            '                            <div class="card-body">' +
+                            '                               ' + data[i]['description']+
+                            '                            </div>' +
+                            '                        </div><br>');
+                    }
+
+
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+        })
+    })
 
 </script>

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d42de6-3dcf-4abc-9a65-b193dc53f943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/cards-gallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user/eye_doc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user/o_doc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/component/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/component/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/component/userSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/component/userSidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/eye_doc.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/eye_doc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/o_doc.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/o_doc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/references.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/references.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user/home.php">
+        <entry file="file://$PROJECT_DIR$/views/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="56" column="10" selection-end-line="110" selection-end-column="9" />
+            <state relative-caret-position="487">
+              <caret line="128" column="46" lean-forward="true" selection-start-line="128" selection-start-column="46" selection-end-line="128" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -29,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/views/component/userSidebar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+              <caret column="18" selection-start-column="18" selection-end-column="57" />
               <folding>
                 <element signature="e#18#68#0#HTML" expanded="true" />
               </folding>
@@ -37,11 +39,75 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/component/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="8217" column="12" lean-forward="true" selection-start-line="8217" selection-start-column="12" selection-end-line="8217" selection-end-column="12" />
+            <state>
+              <caret column="57" selection-start-column="57" selection-end-column="57" />
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="99" column="15" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/user/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/user/o_doc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/admin/add_catigories.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/user/eye_doc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/user/references.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1106#1112#0#HTML" expanded="true" />
+                <element signature="e#1112#1118#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,19 +155,20 @@
         <option value="$PROJECT_DIR$/views/register.php" />
         <option value="$PROJECT_DIR$/views/admin/add_catigories.php" />
         <option value="$PROJECT_DIR$/views/admin/add_drug.php" />
-        <option value="$PROJECT_DIR$/views/user/home.php" />
-        <option value="$PROJECT_DIR$/views/component/sidebar.html" />
-        <option value="$PROJECT_DIR$/views/user/references.php" />
         <option value="$PROJECT_DIR$/css/cards-gallery.css" />
-        <option value="$PROJECT_DIR$/views/user/o_doc.php" />
-        <option value="$PROJECT_DIR$/views/user/eye_doc.php" />
-        <option value="$PROJECT_DIR$/views/component/userSidebar.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/views/user/references.php" />
+        <option value="$PROJECT_DIR$/views/user/eye_doc.php" />
+        <option value="$PROJECT_DIR$/scss/style.scss" />
+        <option value="$PROJECT_DIR$/views/component/userSidebar.php" />
+        <option value="$PROJECT_DIR$/views/component/sidebar.html" />
+        <option value="$PROJECT_DIR$/views/user/home.php" />
+        <option value="$PROJECT_DIR$/views/user/o_doc.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
@@ -124,23 +191,13 @@
             <path>
               <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
               <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
               <item name="Developing Topical Drug Guide Palestine Instructions" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Developing Topical Drug Guide Palestine Instructions" type="b2602c69:ProjectViewProjectNode" />
@@ -197,10 +254,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24014000" />
+    <option name="totallyTimeSpent" value="26343000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2585288" />
@@ -274,21 +331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="120" column="106" selection-start-line="120" selection-start-column="106" selection-end-line="120" selection-end-column="106" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3987#3993#0#HTML" expanded="true" />
-            <element signature="e#3993#3999#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -318,38 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/add_catigories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/component/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/references.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="78" column="25" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="56" column="10" selection-end-line="110" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/cards-gallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
@@ -360,34 +370,86 @@
     <entry file="file://$PROJECT_DIR$/images/eye1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/o_doc.php">
+    <entry file="file://$PROJECT_DIR$/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="33" selection-end-column="12" />
+        <state relative-caret-position="487">
+          <caret line="128" column="46" lean-forward="true" selection-start-line="128" selection-start-column="46" selection-end-line="128" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/references.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1106#1112#0#HTML" expanded="true" />
+            <element signature="e#1112#1118#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/eye_doc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state relative-caret-position="464">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="99" column="15" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="5806" column="1" selection-start-line="5806" selection-start-column="1" selection-end-line="5806" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/component/userSidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+          <caret column="18" selection-start-column="18" selection-end-column="57" />
           <folding>
             <element signature="e#18#68#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/views/admin/add_catigories.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8217" column="12" lean-forward="true" selection-start-line="8217" selection-start-column="12" selection-end-line="8217" selection-end-column="12" />
+        <state relative-caret-position="340">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/component/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="57" selection-start-column="57" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/o_doc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
         </state>
       </provider>
     </entry>

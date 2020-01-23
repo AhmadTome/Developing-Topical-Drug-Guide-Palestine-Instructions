@@ -16,6 +16,18 @@ if (!isset($_SESSION['user_email'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
+<style>
+    body {
+        overflow: hidden;
+        height: 100%;
+    }
+    #content {
+        float:right;
+        margin: 0 0 0 2em;
+        max-height: 100%;
+        overflow: auto;
+    }
+</style>
 <body>
 
 <div class="wrapper d-flex align-items-stretch" >
@@ -71,7 +83,6 @@ if (!isset($_SESSION['user_email'])) {
 
 </body>
 </html>
-
 <script>
     $(document).ready(function () {
         $('.cat').on("click", function () {
@@ -109,3 +120,4 @@ if (!isset($_SESSION['user_email'])) {
         })
     })
 </script>
+

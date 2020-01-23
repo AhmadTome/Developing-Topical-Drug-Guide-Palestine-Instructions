@@ -28,7 +28,7 @@ if (!isset($_SESSION['user_email'])) {
         <section class="body-sign col-xs-12 col-lg-offset-4">
             <div class="center-sign">
 
-                <div class="panel panel-sign">
+                <div class="panel panel-sign panel-body">
                     <div class="panel-title-sign mt-xl text-left">
                         <h2 class="title text-uppercase text-bold m-none text-center"> References&nbsp;&nbsp;</h2>
                     </div>
@@ -54,7 +54,7 @@ if (!isset($_SESSION['user_email'])) {
                         ?>
                     </p>
 
-                    <div class="panel-body">
+                    <div class="">
                         <ul>
 
                             <li>
@@ -77,7 +77,7 @@ if (!isset($_SESSION['user_email'])) {
                                 <p>
                                     Retrieved 21 January 2020, from
                                     <a href="http://bpc.pshttp://bpc.ps">http://bpc.pshttp://bpc.ps </a>
-                                     (2020)
+                                    (2020)
                                 </p>
                             </li>
                             <li>
@@ -131,4 +131,42 @@ if (!isset($_SESSION['user_email'])) {
 
 </body>
 </html>
+
+<script>
+    $(document).ready(function () {
+        $('.cat').on("click", function () {
+            var id = $(this).attr('id');
+            $.ajax({
+                url: "../../database/getCategories.php",
+                type: "get",
+                data: {"id": id},
+                success: function (data) {
+                    $('.panel-body').empty();
+                    data = JSON.parse(data)
+
+                    console.log(data)
+
+                    for (var i = 0 ; i<data.length;i++){
+                        $('.panel-body').append('<div class="card">' +
+                            '                            <div class="card-header">' +
+                            '                                Name of the Drug is <b>'+ data[i]["name"] +
+                            '                            </b></div>' +
+                            '                            <div class="card-body">' +
+                            '                               ' + data[i]['description']+
+                            '                            </div>' +
+                            '                        </div><br>');
+                    }
+
+
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+        })
+    })
+</script>
 
