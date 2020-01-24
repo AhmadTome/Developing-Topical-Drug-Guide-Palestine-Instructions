@@ -17,7 +17,7 @@ mysqli_set_charset($conn,"utf8");
 
 $id = $_GET['id'];
 
-$query = "SELECT * FROM `drug` WHERE `cat_id`=".$id;
+$query = "SELECT * FROM `drug` WHERE `id`=".$id;
 $result = $conn->query($query);
 if ($result->num_rows > 0) {
     $info = [];

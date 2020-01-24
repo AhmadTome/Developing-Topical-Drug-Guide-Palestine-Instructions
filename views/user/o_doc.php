@@ -85,8 +85,9 @@ if (!isset($_SESSION['user_email'])) {
 
 <script>
     $(document).ready(function () {
-        $('.cat').on("click", function () {
+        $('.drug_name').on('click',function () {
             var id = $(this).attr('id');
+
             $.ajax({
                 url: "../../database/getCategories.php",
                 type: "get",
@@ -97,16 +98,15 @@ if (!isset($_SESSION['user_email'])) {
 
                     console.log(data)
 
-                    for (var i = 0 ; i<data.length;i++){
-                        $('.panel-body').append('<div class="card">' +
-                            '                            <div class="card-header">' +
-                            '                                Name of the Drug is <b>'+ data[i]["name"] +
-                            '                            </b></div>' +
-                            '                            <div class="card-body">' +
-                            '                               ' + data[i]['description']+
-                            '                            </div>' +
-                            '                        </div><br>');
-                    }
+                    $('.panel-body').append('<div class="card">' +
+                        '                            <div class="card-header">' +
+                        '                                Name of the Drug is <b>'+ data[0]["name"] +
+                        '                            </b></div>' +
+                        '                            <div class="card-body">' +
+                        '                               ' + data[0]['description']+
+                        '                            </div>' +
+                        '                        </div><br>');
+
 
 
 
@@ -117,7 +117,8 @@ if (!isset($_SESSION['user_email'])) {
 
 
             });
-        })
+        });
+
     })
 
 </script>

@@ -10,10 +10,35 @@
 
                     <?php
                     $cats = getcats();
+                    $cat = [];
                     for ($i = 0; $i < count($cats); $i++) {
-                        echo '<li>
-                                <a class="cat" id=' . $cats[$i]["id"] . ' href="#">' . $cats[$i]["cat_repName"] . '</a>
-                             </li>';
+                        $cat_name = $cats[$i]["cat_repName"];
+
+                        if(in_array($cat_name,$cat)){
+                            continue ;
+                        }else{
+                            array_push($cat,$cat_name);
+                        }
+                        $ele_parent = ' <li>
+                                    <a href='.'#'.$cat_name.' data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
+                                        '. $cat_name .'
+                                    </a>
+                            <ul class="collapse list-unstyled" id='.$cat_name.'>
+                                ';
+                        $ele_parentfollow = '</ul>
+                        </li>';
+                        $sub_cat = '' ;
+                        for ($j = 0 ; $j < count($cats) ; $j++){
+
+                            if($cats[$j]["cat_repName"] == $cat_name){
+                                $sub_cat = $sub_cat. '<li>
+                                    <a class="drug_name" id='. $cats[$j]["id"] .'  href="#">'. $cats[$j]["name"] .'</a>
+                                </li>';
+                            }
+                        }
+
+                        echo $ele_parent . $sub_cat . $ele_parentfollow ;
+
                     }
 
                     ?>
@@ -57,39 +82,12 @@
 
 <script>
     $(document).ready(function () {
-        $('.cat').on("click", function () {
-            var id = $(this).attr('id');
-            $.ajax({
-                url: "../../database/getCategories.php",
-                type: "get",
-                data: {"id": id},
-                success: function (data) {
-                    $('.panel-body').empty();
-                    data = JSON.parse(data)
 
-                    console.log(data)
-
-                    for (var i = 0 ; i<data.length;i++){
-                        $('.panel-body').append('<div class="card">' +
-                            '                            <div class="card-header">' +
-                            '                                Name of the Drug is <b>'+ data[i]["name"] +
-                            '                            </b></div>' +
-                            '                            <div class="card-body">' +
-                            '                               ' + data[i]['description']+
-                            '                            </div>' +
-                            '                        </div><br>');
-                    }
+        $('.drug_name').on('click',function () {
+            alert($(this).attr('id'))
+        });
 
 
-
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-
-
-            });
-        })
     })
 </script>
 
@@ -110,12 +108,13 @@ function getcats()
         die("Connection failed: " . mysqli_connect_error());
     }
     mysqli_set_charset($conn, "utf8");
-    $query = "SELECT * FROM `categories`";
+    $query = "SELECT c.id as cat_id ,c.cat_representative , d.id , d.name , d.description FROM categories c inner join drug d on c.id = d.cat_id ";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         $info = [];
         while ($row = $result->fetch_assoc()) {
-            array_push($info, ["cat_repName" => $row["cat_representative"], "id" => $row["id"]]);
+            array_push($info, ["cat_repName" => $row["cat_representative"]
+                , "id" => $row["id"], "name" => $row["name"], "description" => $row["description"], "cat_id" => $row["cat_id"]]);
         }
 
         return $info;

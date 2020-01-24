@@ -124,7 +124,7 @@ if (!isset($_SESSION['user_email'])) {
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../../js/popper.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/main.js"></script>
@@ -134,8 +134,10 @@ if (!isset($_SESSION['user_email'])) {
 
 <script>
     $(document).ready(function () {
-        $('.cat').on("click", function () {
+
+        $('.drug_name').on('click',function () {
             var id = $(this).attr('id');
+
             $.ajax({
                 url: "../../database/getCategories.php",
                 type: "get",
@@ -146,16 +148,15 @@ if (!isset($_SESSION['user_email'])) {
 
                     console.log(data)
 
-                    for (var i = 0 ; i<data.length;i++){
                         $('.panel-body').append('<div class="card">' +
                             '                            <div class="card-header">' +
-                            '                                Name of the Drug is <b>'+ data[i]["name"] +
+                            '                                Name of the Drug is <b>'+ data[0]["name"] +
                             '                            </b></div>' +
                             '                            <div class="card-body">' +
-                            '                               ' + data[i]['description']+
+                            '                               ' + data[0]['description']+
                             '                            </div>' +
                             '                        </div><br>');
-                    }
+
 
 
 
@@ -166,7 +167,8 @@ if (!isset($_SESSION['user_email'])) {
 
 
             });
-        })
+        });
+
     })
 </script>
 

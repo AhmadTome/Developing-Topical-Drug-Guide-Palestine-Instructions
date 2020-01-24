@@ -100,7 +100,7 @@ session_start();
 <div class="container" style="opacity: 0.85;">
     <div class="card card-login mx-auto text-center bg-dark">
         <div class="card-header mx-auto bg-dark">
-            <h3 style="color: #f8b739"> Developing Topical Drug Guide Palestine Instructions </h3><br/>
+            <h3 style="color: #f8b739"> Developing Ophthalmic Topical Drug Guide Palestine Instructions </h3><br/>
             <span class="logo_title mt-5"> Register Page </span>
             <!--            <h1>--><?php //echo $message?><!--</h1>-->
 
